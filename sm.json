@@ -1,0 +1,10 @@
+{
+  "apiEndpoint": "https://manuelo.prismic.io/api/v2",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "libraries": [
+    "@/slices"
+  ],
+  "_latest": "0.3.0",
+  "framework": "next",
+  "storybook": "http://localhost:8888"
+}
