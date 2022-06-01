@@ -1,7 +1,7 @@
 {
-  "name": "base-proyect-for-ria-public",
-  "description": "sample proyect using nextjs, prismic, netlify, slicemachine, storybook, cypress, prettier and eslint",
-  "author": "Ria Public Site Team",
+  "name": "Site-Manuel-Ortega-dev",
+  "description": "My Web Site",
+  "author": "Manuelo Dev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,6 +29,7 @@
     "ora": "^5.4.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-helmet": "^6.1.0",
     "react-is": "^18.0.0",
     "react-text-transition": "^2.0.0",
     "styled-components": "^5.3.5"
