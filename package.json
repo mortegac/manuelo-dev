@@ -20,6 +20,7 @@
     "@prismicio/helpers": "2.2.1",
     "@prismicio/next": "0.1.2",
     "@prismicio/react": "2.2.0",
+    "axios": "^0.27.2",
     "fp-ts": "^2.11.9",
     "io-ts": "^2.2.16",
     "io-ts-types": "^0.5.16",

@@ -4,7 +4,7 @@
 import {useState, useEffect} from 'react';
 import Image from "next/image";
 import styled, { ThemeProvider } from "styled-components";
-
+import axios from 'axios';
 
 
 import {Helmet} from "react-helmet";
@@ -15,6 +15,10 @@ import SectionContainer from '../lib/RMT_Common_Components/commonComponents/Cont
 import SliceContainer from '../lib/RMT_Common_Components/commonComponents/Containers/SliceContainer/SliceContainer';
 import image from '../lib/RMT_Common_Components/commonAssets/image-Hero.svg';
 import { GlobalStyle, theme } from "../lib/RMT_Common_Components/commonStyles";
+import Card from '../components/Card';
+
+
+const URLAPI_DEV_TO = 'https://dev.to/api/articles?username=mortegac';
 
 const Area = styled.div`
   background: #ffffff;  
@@ -149,6 +153,7 @@ const TEXTS = [
 
 export default function App() {
   const [index, setIndex] = useState(0);
+  const [post, setPost] = useState([]);
 
   useEffect(() => {
     const intervalId = setInterval(() =>
@@ -158,6 +163,17 @@ export default function App() {
     return () => clearTimeout(intervalId);
   }, []);
  
+  useEffect(() => {
+  
+    
+    axios.get(URLAPI_DEV_TO)
+    .then(res => {
+      const post = res.data;
+      setPost(post);
+    })
+
+  }, []);
+
   return (
     <>
         <GlobalStyle />
@@ -193,7 +209,44 @@ export default function App() {
               
              
             </SectionContainer>
+            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'absolute', top:'50vh', left:'50vh'}}>
+
+              <SliceContainer style={{backgroundColor: 'transparent', minWidth:'500px', overflow: 'hidden', display:'flex', flexDirection:'column'}}>
+                <h2
+                  style={
+                    {
+                      color:'#6D7B81',
+                      fontSize:'26px',
+                    }}
+                >Publicaciones realizadas
+                </h2>
+              </SliceContainer>
+            </SectionContainer>
             
+            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'absolute', top:'56vh', left:'50vh'}}>
+            
+              <SliceContainer style={{backgroundColor: 'transparent', minWidth:'500px', overflow: 'hidden', display:'flex', flexDirection:'row', flexWrap: 'wrap'}}>
+                {
+                  post.map((item , index)=>(
+                    // eslint-disable-next-line react/jsx-key
+                    <Card
+                      key={index}
+                      image={item.cover_image}
+                      likes={item.positive_reactions_count}
+                      title={item.title}
+                      url={item.url}
+                      user={item.user.username}
+                      description={item.description}
+                    />
+
+                  ))
+                }
+               
+                {/* <span>{JSON.stringify(post,null, 2)}</span> */}
+              </SliceContainer>
+            </SectionContainer>
+
+
             <Area>
               <ul className="circles">
                       <li></li>
