@@ -2,18 +2,18 @@ import styled from "styled-components";
 
 const CardBox = styled.div`
     position: relative;
-    width: 450px; /* Remove for full width */
-    height: 550px; /* Remove for full width */
-    margin: 30px 16px;
+    width: 270px; /* Remove for full width */
+    height: 510px; /* Remove for full width */
+    margin: 30px 0px;
     box-shadow: 0 0 20px rgba(0,0,0, .3);
     border-radius:2%;
 
     .card-header{
         position: relative;
         height: 232px;
-        // background-size: cover;
-        background-size: contain;
-        background-position: top;
+        background-size: cover;
+        // background-size: contain;
+        background-position: top center;
         background-repeat: no-repeat;
         background-color: black;
       }
@@ -78,15 +78,18 @@ const CardBox = styled.div`
         right: 25px;
         width: 45px;
         height: 45px;
-        background: linear-gradient(to left, #2D77C1, #68FAC2);
+        background: linear-gradient(to left, #007aff, #007aff);
         border-radius:100%;
         box-shadow: 0 10px 15px rgba(110,221,235, .53);
       }
       
       .btn-follow:after{
-        content: '';
+        content: '>>';
+        font-size: 16px;
+        color: white;
         position:absolute;
-        background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/add.svg) no-repeat;
+        // background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077483/profile-card/images/menu.svg) no-repeat;
+        // background: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/add.svg) no-repeat;
         width:17px;
         height: 17px;
         left: 50%;
@@ -173,7 +176,7 @@ const CardBox = styled.div`
 
 const Card = (props) =>{
 
-    const {image, title, description, url, user, likes} = props;
+    const {image, title, description, url, likes} = props;
 
     return(
         <CardBox>
@@ -193,7 +196,7 @@ const Card = (props) =>{
 
             <div className="card-body">
                 <h2 className="name">{title}</h2>
-                <h4 className="job-title">@{user}</h4>
+                {/* <h4 className="job-title">@{user}</h4> */}
                 <div className="bio">
                     {description}
                 </div>

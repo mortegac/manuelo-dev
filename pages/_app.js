@@ -15,7 +15,9 @@ import SectionContainer from '../lib/RMT_Common_Components/commonComponents/Cont
 import SliceContainer from '../lib/RMT_Common_Components/commonComponents/Containers/SliceContainer/SliceContainer';
 import image from '../lib/RMT_Common_Components/commonAssets/image-Hero.svg';
 import { GlobalStyle, theme } from "../lib/RMT_Common_Components/commonStyles";
-import Card from '../components/Card';
+
+// import Card from '../components/Card';
+import ListCards from '../components/ListCards';
 
 
 const URLAPI_DEV_TO = 'https://dev.to/api/articles?username=mortegac';
@@ -184,7 +186,7 @@ export default function App() {
         </Helmet>
         <ThemeProvider theme={theme}>
           <PageContainer style={{ backgroundColor: 'transparent'}}>
-            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'absolute', top:'10vh', left:'50vh'}}>
+            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'fixed', top:'0vh', left:'50vh'}}>
               <SliceContainer style={{backgroundColor: 'transparent', minWidth:'500px', overflow: 'hidden'}}>
                 {/* <h1>Hi, I’m
                   <span style={{display:'block', color:'#4BA0D3'}}>Manuel Ortega</span>
@@ -209,7 +211,7 @@ export default function App() {
               
              
             </SectionContainer>
-            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'absolute', top:'50vh', left:'50vh'}}>
+            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'fixed', top:'25vh', left:'50vh'}}>
 
               <SliceContainer style={{backgroundColor: 'transparent', minWidth:'500px', overflow: 'hidden', display:'flex', flexDirection:'column'}}>
                 <h2
@@ -223,7 +225,14 @@ export default function App() {
               </SliceContainer>
             </SectionContainer>
             
-            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'absolute', top:'56vh', left:'50vh'}}>
+            <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'fixed', top:'30vh', left:'50vh'}}>
+              <SliceContainer style={{backgroundColor: 'transparent', minWidth:'500px', overflow: 'hidden', display:'flex', flexDirection:'row', flexWrap: 'wrap'}}>
+                <ListCards post={post}/>
+              </SliceContainer>
+            </SectionContainer>
+
+            
+            {/* <SectionContainer style={{ backgroundColor: 'transparent', width: '100%', position: 'fixed', top:'56vh', left:'50vh'}}>
             
               <SliceContainer style={{backgroundColor: 'transparent', minWidth:'500px', overflow: 'hidden', display:'flex', flexDirection:'row', flexWrap: 'wrap'}}>
                 {
@@ -241,10 +250,8 @@ export default function App() {
 
                   ))
                 }
-               
-                {/* <span>{JSON.stringify(post,null, 2)}</span> */}
               </SliceContainer>
-            </SectionContainer>
+            </SectionContainer> */}
 
 
             <Area>
