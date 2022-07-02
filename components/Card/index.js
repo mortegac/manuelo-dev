@@ -187,7 +187,7 @@ const Card = (props) =>{
 
                 <div className="card-header-slanted-edge">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path className="polygon" d="M-20,200,1000,0V200Z" /></svg>
-                    <a href={url} target="_blank" rel='noreferrer' className="btn-follow"><span className="sr-only">Follow</span></a>
+                    <a href={url} target="_blank" rel="noopener noreferrer" className="btn-follow"><span className="sr-only">Follow</span></a>
                 </div>
             </div>
 

@@ -204,7 +204,7 @@ export default function App() {
                 </section>
               </SliceContainer>
               <SliceContainer style={{minWidth:'43%'}}>
-                <Image src={image} />
+                <Image src={image} alt="Manuelo dev"/>
               </SliceContainer>
               
              
@@ -218,7 +218,7 @@ export default function App() {
                       color:'#6D7B81',
                       fontSize:'26px',
                     }}
-                >Publicaciones realizadas
+                >Publications made
                 </h2>
               </SliceContainer>
             </SectionContainer>
