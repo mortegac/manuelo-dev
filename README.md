@@ -1,6 +1,6 @@
-<img align="right" src="https://app.riamoneytransfer.com/favicon-32x32.png?v=b5c554880e0b1566c54e5f8b0c9985b0">
+# Manuelo.dev (NextJs)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e6640d6d-902f-4199-bee6-dc0321b42473/deploy-status)](https://app.netlify.com/sites/manuelo/deploys)
 
-# RIA Public Site (NextJs)
 
 👉 Developing ...
 
